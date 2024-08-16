@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "68d2b00a-91f9-48fa-9be7-cfbc2b9ba9e1",
+		"name": "gerenciar_eventos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33348971"
+	},
+	"item": [
+		{
+			"name": "palestrantes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/eventos/palestrantes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"palestrantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/palestrantes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Leticia\",\r\n    \"area_especializacao\":\"Web developer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/eventos/palestrantes",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"palestrantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/palestrantes/id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/eventos/palestrantes/f76ed917-da00-46c7-9aa3-5577e983e0ba",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"palestrantes",
+						"f76ed917-da00-46c7-9aa3-5577e983e0ba"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/eventos/criar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\":\"Mundo Senai 2.0\",\r\n    \"data_evento\":\"2024-09-09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/eventos/criar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"criar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/eventos/agenda",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/participantes",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/participantes/registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Raquel\", \r\n    \"email\":\"raquel@gamil.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/eventos/participantes/registrar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"participantes",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/participantes/inscrever",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "/eventos/editar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/eventos/editar",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"eventos",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/eventos/feedbacks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:3333",
+			"type": "string"
+		}
+	]
+}
